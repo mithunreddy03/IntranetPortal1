@@ -1,0 +1,99 @@
+.slot-booking-wrapper {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .slot-booking-wrapper h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .booking-form .section {
+    margin-bottom: 20px;
+  }
+  
+  .booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .booking-form input[type="date"],
+  .booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border 0.3s ease;
+  }
+  
+  .booking-form textarea {
+    resize: vertical;
+  }
+  
+  .booking-form input:focus,
+  .booking-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .option-card {
+    padding: 10px 14px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .option-card:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .option-card.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }
+  
+  .booking-form button {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .booking-form button:hover {
+    background-color: black;
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  

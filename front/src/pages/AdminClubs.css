@@ -1,0 +1,254 @@
+/* AdminClubs.css - Styling for the Admin Clubs View */
+
+.admin-clubs-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.header-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: #4a6bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background: #3955d1;
+}
+
+.user-role {
+  color: #555;
+  margin: 0;
+  font-weight: 500;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.action-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-bottom: 20px;
+}
+
+.create-club-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.create-club-button:hover {
+  background: #3d8b40;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.loading-indicator, .error-message, .no-clubs-message {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.loading-indicator {
+  color: #4a6bff;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.no-clubs-message {
+  color: #666;
+}
+
+/* Club Grid Layout */
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 clubs per row */
+  gap: 20px;
+  margin-top: 60px; /* Space for the Create New Club button */
+}
+
+.club-card {
+  aspect-ratio: 1 / 1; /* Make cards square */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  height: 300px; /* Fixed height for consistency */
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.club-image-container {
+  width: 100%;
+  height: 55%; /* Reduced to leave space for text and button */
+  margin-bottom: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.club-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.club-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.club-card:hover .club-image {
+  transform: scale(1.05);
+}
+
+.club-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 auto;
+  text-align: center;
+  font-weight: 600;
+  padding: 0 5px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-details-button {
+  background: #4a6bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+  width: 100%;
+}
+
+.view-details-button:hover {
+  background: #3955d1;
+}
+
+.optional-text {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: normal;
+}
+
+/* Responsive design for tablet and mobile */
+@media (max-width: 1024px) {
+  .clubs-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .clubs-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller tablets */
+  }
+  
+  .action-buttons {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+  
+  .content-container {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clubs-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .user-role {
+    margin-left: 5px;
+  }
+}

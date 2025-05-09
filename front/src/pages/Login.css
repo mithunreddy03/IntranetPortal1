@@ -1,0 +1,103 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+}
+
+.login-form {
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #007acc, #005bb5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #005bb5, #003d80);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.role-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.role-option {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.role-option:hover {
+  background-color: #e0e0e0;
+}
+
+.role-option.selected {
+  background-color: #007acc;
+  color: white;
+}
+
+.loading-message {
+  color: #007acc;
+  font-size: 14px;
+  margin-bottom: 15px;
+}

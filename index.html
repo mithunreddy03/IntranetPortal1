@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Club Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clubs.html">Clubs</a></li>
+            <li><a href="new-club.html">New Club</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Create a New Club</h2>
+        <form id="new-club-form">
+            <label for="club-name">Club Name:</label>
+            <input type="text" id="club-name" name="club-name" required>
+
+            <label for="club-description">Description:</label>
+            <textarea id="club-description" name="club-description" required></textarea>
+
+            <label for="club-category">Category:</label>
+            <select id="club-category" name="club-category">
+                <option value="sports">Sports</option>
+                <option value="arts">Arts</option>
+                <option value="technology">Technology</option>
+            </select>
+
+            <button type="submit">Create Club</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Club Management System</p>
+    </footer>
+</body>
+</html>

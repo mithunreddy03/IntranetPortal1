@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Complaints</h1>
+  <ul id="complaintsList"></ul>
+
+  <h1>Feedback</h1>
+  <ul id="feedbackList"></ul>
+
+  <script>
+    async function loadData() {
+      const complaints = await fetch("/getComplaints").then(res => res.json());
+      const feedback = await fetch("/getFeedback").then(res => res.json());
+
+      const cList = document.getElementById("complaintsList");
+      complaints.forEach(c => {
+        const li = document.createElement("li");
+        li.textContent = `[${c.date}] (${c.category}): ${c.complaint}`;
+        cList.appendChild(li);
+      });
+
+      const fList = document.getElementById("feedbackList");
+      feedback.forEach(f => {
+        const li = document.createElement("li");
+        li.textContent = `[${f.date}] ${f.lecturer}: ${f.feedback}`;
+        fList.appendChild(li);
+      });
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
